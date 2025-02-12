@@ -4,13 +4,18 @@
 
 
 
-## Install
+## Install
 
 ```bash
+# clone the repo
 $ git clone git@github.com:birophilo/artfinder_exercise.git
 $ cd artfinder_exercise
+
+# create and initialize a virtual environment
 $ python -m venv env
 $ source env/bin/activate
+
+# install the requirements
 $ pip install -r requirements.txt
 ```
 

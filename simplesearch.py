@@ -13,8 +13,8 @@ class WordSearcher:
         ranking_system: str = "basic",  # or "advanced"
         test_mode: bool = False
     ):
-        file_list = glob.glob(f"{dir}/*")
-        # os.path.join() etc
+
+        filepath_list = glob.glob(f"{dir}/*")
 
         self.test_mode = test_mode
         self.ranking_system = ranking_system
@@ -22,7 +22,7 @@ class WordSearcher:
         self.word_indexes = {}
 
         # create word index for each file, but skip if it cannot be parsed as text
-        for filepath in file_list:
+        for filepath in filepath_list:
             word_index = self.build_word_index_for_file(filepath)
             if word_index is not None:
                 self.word_indexes[filepath] = word_index
